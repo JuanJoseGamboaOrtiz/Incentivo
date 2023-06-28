@@ -1,0 +1,19 @@
+{
+    "name": "apolt01-032/incentivo",
+    "description": "Actividad Filtro",
+    "autoload": {
+        "psr-4": {
+            "App\\": ["./scripts/db"]
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan José Gamboa Ortiz",
+            "email": "juangamboaortiz@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "bramus/router": "~1.6"
+    }
+}
