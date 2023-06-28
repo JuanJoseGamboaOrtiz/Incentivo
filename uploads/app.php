@@ -7,7 +7,11 @@
 
 
     $router->get("/prueba",function(){
-        new Connect();
+        $db= new Connect();
+        $res= $db->con->prepare("SELECT * FROM pais");
+        $res->execute();    
+        $res = $res->fetchAll(PDO::FETCH_ASSOC);
+        echo json_encode($res);
     });
 
 
