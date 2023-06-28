@@ -48,9 +48,10 @@ document.addEventListener('DOMContentLoaded',async(e)=>{
         });
     });
 
+    const paises= document.querySelector('#pais');
 
     async function cargarPaises(){
-        const paises= document.querySelector('#pais');
+        
         options.method="GET";
         let res= await fetch("http://localhost/ApolT01-032/Incentivo/uploads/camper/paises",options);
 
@@ -61,10 +62,19 @@ document.addEventListener('DOMContentLoaded',async(e)=>{
             <option value="${pais['idPais']}" selected>${pais['nombrePais']}</option>
             `;
         })
-
-        console.log(res);
         
     }
+
+    paises.addEventListener('input',async (e) =>{
+        options.method="GET";
+        console.log("hola");
+        let id = e.target;
+        console.log(id);
+        let res= await fetch(`http://localhost/ApolT01-032/Incentivo/uploads/camper/departamento/${id}`,options);
+        res= await res.json();
+    })
+
+  
 
     cargarPaises();
     

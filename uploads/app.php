@@ -48,6 +48,15 @@
             $res = $res->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($res);
         });
+
+
+        $router->get("/departamentos",function(){
+            $db= new Connect();
+            $res= $db->con->prepare("SELECT nombreDep,idDep FROM departamento");
+            $res->execute();    
+            $res = $res->fetchAll(PDO::FETCH_ASSOC);
+            echo json_encode($res);
+        });
     });
 
     $router->run();
