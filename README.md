@@ -63,5 +63,14 @@ Para la creación de la base de datos fue necesario cambiar el tipo de dato de i
 
 - 
 
+## FUNCIONAMIENTO DE LAS RUTAS
 
+http://localhost/ApolT01-032/Incentivo/uploads/camper , Está ruta con el metodo get obtiene todos los campers, con la información correspondiente.
+
+http://localhost/ApolT01-032/Incentivo/uploads/camper, con el metodo DELETE elimina el camper según su id.
+
+http://localhost/ApolT01-032/Incentivo/uploads/camper/paises, obtiene el nombre e id de todos los paises en la base de datos
+
+
+http://localhost/ApolT01-032/Incentivo/uploads/camper/departamentos, obtiene el nombre e id de los departamentos
 
